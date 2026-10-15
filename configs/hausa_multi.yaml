@@ -1,0 +1,60 @@
+# Multi-speaker Hausa FastSpeech 2: same as hausa_single.yaml but with speaker embeddings.
+# Speakers are read from the 'speaker' column of metadata.csv; F0/energy are normalised per speaker.
+dataset: {corpus_dir: ./data/hausa_multi_corpus, alignment_dir: ./data/hausa_multi_alignments,
+  out_dir: ./preprocessed/hausa_multi, val_size: 100}
+audio: {sampling_rate: 22050, n_fft: 1024, hop_length: 256, win_length: 1024, n_mels: 80,
+  fmin: 0, fmax: 8000}
+frontend: {tone_mode: auto, lexicon_path: null}
+model:
+  hidden: 256
+  max_len: 2000
+  encoder:
+    layers: 4
+    heads: 2
+    conv_filter: 1024
+    conv_kernel: [9, 1]
+    dropout: 0.2
+  decoder:
+    layers: 6
+    heads: 2
+    conv_filter: 1024
+    conv_kernel: [9, 1]
+    dropout: 0.2
+  hier:
+    enabled: true
+    layers: 1
+    heads: 2
+    conv_filter: 512
+    conv_kernel: [3, 1]
+    dropout: 0.1
+    levels: [syllable, word, phrase]
+  use_downstep: true                     # tone-derived downstep counter feature
+  pitch_tone_skip: true                  # explicit tone+downstep path into the pitch predictor (contour mode)
+  variance_predictor: {filter: 256, kernel: 3, dropout: 0.5}
+  pitch: {mode: contour, n_points: 3, n_bins: 256, f0_min: 60, f0_max: 700, min_voiced_frames: 5}
+  energy: {mode: phoneme, n_bins: 256, log: true}
+  tone: {dropout_word: 0.0, dropout_utt: 0.0}   # 0 = best accuracy with marked text; >0 only to cope with unmarked text (see docs/RESULTS.md)
+  postnet: {enabled: true, channels: 512, layers: 5, kernel: 5}
+  multi_speaker: true
+  speaker_to_decoder: true
+loss:
+  weights: {mel: 1.0, postnet: 1.0, duration: 1.0, pitch: 1.0, energy: 1.0, tone: 0.1,
+    length: 0.0}
+  tone_bearing_weight: 2.0
+  length_margin: 0.2
+train:
+  out_dir: ./output/hausa_multi
+  batch_size: 16
+  total_steps: 200000
+  warmup_steps: 4000
+  peak_lr: 1.0e-3
+  betas: [0.9, 0.98]
+  eps: 1.0e-09
+  grad_clip: 1.0
+  grad_accum: 1
+  log_every: 100
+  val_every: 2000
+  save_every: 10000
+  keep_last: 5
+  num_workers: 2
+  seed: 1234

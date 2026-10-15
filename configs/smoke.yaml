@@ -1,0 +1,38 @@
+# Tiny CPU config used by scripts/smoke_test.py (paths are overridden by the script).
+dataset: {corpus_dir: ./smoke/corpus, alignment_dir: ./smoke/alignments, out_dir: ./smoke/pre, val_size: 12}
+audio: {sampling_rate: 22050, n_fft: 1024, hop_length: 256, win_length: 1024, n_mels: 80, fmin: 0, fmax: 8000}
+frontend: {tone_mode: auto, lexicon_path: null}
+model:
+  hidden: 96
+  max_len: 1000
+  encoder: {layers: 2, heads: 2, conv_filter: 256, conv_kernel: [9, 1], dropout: 0.1}
+  decoder: {layers: 2, heads: 2, conv_filter: 256, conv_kernel: [9, 1], dropout: 0.1}
+  hier: {enabled: true, layers: 1, heads: 2, conv_filter: 192, conv_kernel: [3, 1], dropout: 0.1, levels: [syllable, word, phrase]}
+  use_downstep: true
+  pitch_tone_skip: true
+  variance_predictor: {filter: 96, kernel: 3, dropout: 0.3}
+  pitch: {mode: contour, n_points: 3, n_bins: 128, f0_min: 60, f0_max: 700, min_voiced_frames: 5}
+  energy: {mode: phoneme, n_bins: 128, log: true}
+  tone: {dropout_word: 0.05, dropout_utt: 0.0}   # 0 = best accuracy with marked text; >0 only to cope with unmarked text (see docs/RESULTS.md)
+  postnet: {enabled: true, channels: 64, layers: 3, kernel: 5}
+  multi_speaker: true
+  speaker_to_decoder: true
+loss:
+  weights: {mel: 1.0, postnet: 1.0, duration: 1.0, pitch: 1.0, energy: 1.0, tone: 0.1, length: 0.0}
+  tone_bearing_weight: 2.0
+train:
+  out_dir: ./smoke/out
+  batch_size: 8
+  total_steps: 600
+  warmup_steps: 100
+  peak_lr: 2.0e-3
+  betas: [0.9, 0.98]
+  eps: 1.0e-9
+  grad_clip: 1.0
+  grad_accum: 1
+  log_every: 50
+  val_every: 200
+  save_every: 300
+  keep_last: 2
+  num_workers: 0
+  seed: 1234

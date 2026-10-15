@@ -1,0 +1,68 @@
+{
+ "fs2_baseline": {
+  "params": 1416262,
+  "train_s": 204,
+  "val": {
+   "mel_l1": 0.473,
+   "pitch_rmse": 0.854,
+   "dur_mae": 1.293,
+   "ls_ratio": 1.424,
+   "rmse_H": 0.777,
+   "rmse_L": 0.87,
+   "rmse_F": 0.897
+  },
+  "test_novel": {
+   "mel_l1": 0.504,
+   "pitch_rmse": 0.982,
+   "dur_mae": 1.641,
+   "ls_ratio": 1.097,
+   "rmse_H": 0.913,
+   "rmse_L": 0.938,
+   "rmse_F": 0.961
+  }
+ },
+ "fs2_tone_length": {
+  "params": 1416262,
+  "train_s": 209,
+  "val": {
+   "mel_l1": 0.392,
+   "pitch_rmse": 0.475,
+   "dur_mae": 0.659,
+   "ls_ratio": 2.059,
+   "rmse_H": 0.303,
+   "rmse_L": 0.188,
+   "rmse_F": 0.781
+  },
+  "test_novel": {
+   "mel_l1": 0.407,
+   "pitch_rmse": 0.557,
+   "dur_mae": 0.657,
+   "ls_ratio": 1.987,
+   "rmse_H": 0.546,
+   "rmse_L": 0.182,
+   "rmse_F": 0.797
+  }
+ },
+ "hausa_full": {
+  "params": 1790376,
+  "train_s": 230,
+  "val": {
+   "mel_l1": 0.398,
+   "pitch_rmse": 0.465,
+   "dur_mae": 0.679,
+   "ls_ratio": 1.962,
+   "rmse_H": 0.388,
+   "rmse_L": 0.44,
+   "rmse_F": 0.352
+  },
+  "test_novel": {
+   "mel_l1": 0.432,
+   "pitch_rmse": 0.577,
+   "dur_mae": 0.642,
+   "ls_ratio": 1.922,
+   "rmse_H": 0.584,
+   "rmse_L": 0.441,
+   "rmse_F": 0.414
+  }
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "fs2_baseline": {
+  "params": 1416262,
+  "train_s": 203,
+  "val": {
+   "mel_l1": 0.471,
+   "pitch_rmse": 0.867,
+   "dur_mae": 1.275,
+   "ls_ratio": 1.388,
+   "rmse_H": 0.744,
+   "rmse_L": 0.91,
+   "rmse_F": 0.912
+  },
+  "test_novel": {
+   "mel_l1": 0.505,
+   "pitch_rmse": 1.03,
+   "dur_mae": 1.663,
+   "ls_ratio": 1.085,
+   "rmse_H": 0.973,
+   "rmse_L": 1.023,
+   "rmse_F": 0.972
+  }
+ },
+ "fs2_tone_length": {
+  "params": 1416262,
+  "train_s": 196,
+  "val": {
+   "mel_l1": 0.388,
+   "pitch_rmse": 0.479,
+   "dur_mae": 0.648,
+   "ls_ratio": 2.004,
+   "rmse_H": 0.306,
+   "rmse_L": 0.176,
+   "rmse_F": 0.801
+  },
+  "test_novel": {
+   "mel_l1": 0.4,
+   "pitch_rmse": 0.583,
+   "dur_mae": 0.643,
+   "ls_ratio": 2.003,
+   "rmse_H": 0.621,
+   "rmse_L": 0.16,
+   "rmse_F": 0.81
+  },
+  "val_unmarked": {
+   "mel_l1": 0.506,
+   "pitch_rmse": 1.196,
+   "dur_mae": 0.648,
+   "ls_ratio": 1.977,
+   "rmse_H": 1.2,
+   "rmse_L": 1.149,
+   "rmse_F": 1.151
+  },
+  "test_unmarked": {
+   "mel_l1": 0.502,
+   "pitch_rmse": 1.063,
+   "dur_mae": 0.649,
+   "ls_ratio": 1.981,
+   "rmse_H": 1.164,
+   "rmse_L": 0.808,
+   "rmse_F": 1.127
+  }
+ },
+ "hausa_full": {
+  "params": 1790376,
+  "train_s": 225,
+  "val": {
+   "mel_l1": 0.406,
+   "pitch_rmse": 0.489,
+   "dur_mae": 0.646,
+   "ls_ratio": 2.051,
+   "rmse_H": 0.524,
+   "rmse_L": 0.328,
+   "rmse_F": 0.359
+  },
+  "test_novel": {
+   "mel_l1": 0.438,
+   "pitch_rmse": 0.606,
+   "dur_mae": 0.638,
+   "ls_ratio": 2.036,
+   "rmse_H": 0.719,
+   "rmse_L": 0.353,
+   "rmse_F": 0.461
+  },
+  "val_unmarked": {
+   "mel_l1": 0.446,
+   "pitch_rmse": 0.819,
+   "dur_mae": 0.665,
+   "ls_ratio": 2.05,
+   "rmse_H": 0.822,
+   "rmse_L": 0.882,
+   "rmse_F": 0.591
+  },
+  "test_unmarked": {
+   "mel_l1": 0.498,
+   "pitch_rmse": 1.035,
+   "dur_mae": 0.64,
+   "ls_ratio": 2.041,
+   "rmse_H": 1.091,
+   "rmse_L": 1.036,
+   "rmse_F": 0.822
+  }
+ },
+ "hausa_no_tonedrop": {
+  "params": 1790376,
+  "train_s": 221,
+  "val": {
+   "mel_l1": 0.353,
+   "pitch_rmse": 0.287,
+   "dur_mae": 0.752,
+   "ls_ratio": 1.997,
+   "rmse_H": 0.164,
+   "rmse_L": 0.169,
+   "rmse_F": 0.226
+  },
+  "test_novel": {
+   "mel_l1": 0.37,
+   "pitch_rmse": 0.362,
+   "dur_mae": 0.673,
+   "ls_ratio": 1.977,
+   "rmse_H": 0.336,
+   "rmse_L": 0.171,
+   "rmse_F": 0.19
+  },
+  "val_unmarked": {
+   "mel_l1": 0.524,
+   "pitch_rmse": 1.242,
+   "dur_mae": 0.739,
+   "ls_ratio": 2.008,
+   "rmse_H": 1.293,
+   "rmse_L": 1.291,
+   "rmse_F": 1.046
+  },
+  "test_unmarked": {
+   "mel_l1": 0.497,
+   "pitch_rmse": 1.044,
+   "dur_mae": 0.672,
+   "ls_ratio": 1.984,
+   "rmse_H": 1.074,
+   "rmse_L": 0.868,
+   "rmse_F": 1.067
+  }
+ },
+ "hausa_tonedrop_low": {
+  "params": 1790376,
+  "train_s": 298,
+  "val": {
+   "mel_l1": 0.379,
+   "pitch_rmse": 0.333,
+   "dur_mae": 0.653,
+   "ls_ratio": 2.034,
+   "rmse_H": 0.258,
+   "rmse_L": 0.243,
+   "rmse_F": 0.258
+  },
+  "test_novel": {
+   "mel_l1": 0.392,
+   "pitch_rmse": 0.398,
+   "dur_mae": 0.632,
+   "ls_ratio": 2.009,
+   "rmse_H": 0.401,
+   "rmse_L": 0.212,
+   "rmse_F": 0.246
+  },
+  "val_unmarked": {
+   "mel_l1": 0.472,
+   "pitch_rmse": 0.879,
+   "dur_mae": 0.667,
+   "ls_ratio": 2.028,
+   "rmse_H": 0.768,
+   "rmse_L": 1.073,
+   "rmse_F": 0.636
+  },
+  "test_unmarked": {
+   "mel_l1": 0.515,
+   "pitch_rmse": 1.129,
+   "dur_mae": 0.636,
+   "ls_ratio": 1.996,
+   "rmse_H": 1.095,
+   "rmse_L": 1.197,
+   "rmse_F": 0.911
+  }
+ },
+ "tone_length_K3": {
+  "params": 1416456,
+  "train_s": 254,
+  "val": {
+   "mel_l1": 0.377,
+   "pitch_rmse": 0.374,
+   "dur_mae": 0.659,
+   "ls_ratio": 2.08,
+   "rmse_H": 0.342,
+   "rmse_L": 0.189,
+   "rmse_F": 0.39
+  },
+  "test_novel": {
+   "mel_l1": 0.399,
+   "pitch_rmse": 0.486,
+   "dur_mae": 0.66,
+   "ls_ratio": 2.019,
+   "rmse_H": 0.614,
+   "rmse_L": 0.164,
+   "rmse_F": 0.366
+  }
+ },
+ "hausa_no_tonedrop_no_hier": {
+  "params": 1417704,
+  "train_s": 266,
+  "val": {
+   "mel_l1": 0.372,
+   "pitch_rmse": 0.304,
+   "dur_mae": 0.644,
+   "ls_ratio": 1.995,
+   "rmse_H": 0.219,
+   "rmse_L": 0.164,
+   "rmse_F": 0.229
+  },
+  "test_novel": {
+   "mel_l1": 0.385,
+   "pitch_rmse": 0.357,
+   "dur_mae": 0.672,
+   "ls_ratio": 1.948,
+   "rmse_H": 0.332,
+   "rmse_L": 0.157,
+   "rmse_F": 0.2
+  }
+ }
+}

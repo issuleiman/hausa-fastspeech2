@@ -1,0 +1,200 @@
+{
+  "steps": 1500,
+  "total_seconds": 338.5,
+  "n_pass": 24,
+  "n_total": 24,
+  "known_limitations": [
+    "tone-swap test: H-L gap follows the INPUT tone (H<->L swapped text)"
+  ],
+  "checks": [
+    {
+      "name": "corpus written",
+      "value": 400,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "lexicon(plain) == annotated tokens",
+      "value": "30/30",
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "no lexicon -> tones UNKNOWN",
+      "value": 3,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "utterances skipped",
+      "value": 0,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "recovered speaker register ratio B/A (true 1.75)",
+      "value": 1.74,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "training time (s)",
+      "value": 292.0,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "val loss vs first train step (need < 0.35x)",
+      "value": "20.09 -> 1.06",
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "no NaN in history",
+      "value": true,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "val long/short vowel ratio pred vs true",
+      "value": "2.08 vs 1.92",
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pred H - L pitch gap (z)",
+      "value": 1.04,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pred F fall start-end (z)",
+      "value": 2.18,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pred H level contour is not falling like F",
+      "value": 0.03,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "downstep: H after >=2 L/F lower than first H (n=30/49)",
+      "value": 1.94,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pred long/short vowel duration ratio (true 2.0)",
+      "value": 2.1,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pred speaker F0 ratio B/A on same text (true ~1.75)",
+      "value": 1.75,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "tone head on unmarked text, SEEN words only (lexical memory)",
+      "value": 0.909,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "tone-swap test: H-L gap follows the INPUT tone (orig text)",
+      "value": 1.42,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "tone-swap test: H-L gap follows the INPUT tone (H<->L swapped text)",
+      "value": 0.44,
+      "passed": false,
+      "detail": "(negative = frequent words are recalled from memory instead of obeying a contradicting tone annotation; documented limitation, see README)",
+      "gating": false
+    },
+    {
+      "name": "novel words: H-L gap (z)",
+      "value": 0.97,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "novel words: F fall start-end (z)",
+      "value": 2.15,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "novel words: long/short duration ratio (true 2.0)",
+      "value": 2.09,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "speed=2 -> frames ratio (expect ~0.5)",
+      "value": 0.49,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pitch_ratio=1.25 -> mean F0 ratio (expect 1.25)",
+      "value": 1.25,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "pitch_range=1.5 -> F0 log-std ratio (expect ~1.5)",
+      "value": 1.5,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    },
+    {
+      "name": "HiFi-GAN vocoder rendered wavs",
+      "value": true,
+      "passed": true,
+      "detail": "",
+      "gating": true
+    }
+  ],
+  "final_val": {
+    "val_total": 1.059866189956665,
+    "val_mel": 0.37089045345783234,
+    "val_postnet": 0.3705345541238785,
+    "val_duration": 0.17317873239517212,
+    "val_pitch": 0.09501073136925697,
+    "val_energy": 0.05025170370936394,
+    "val_tone": 0.0,
+    "val_length": 0.0,
+    "val_long_short_ratio_pred": 2.0757670402526855,
+    "val_long_short_ratio_true": 1.922382891178131,
+    "val_tone_probe_acc": 0.6795454621315002,
+    "step": 1500
+  }
+}

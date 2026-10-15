@@ -1,0 +1,15 @@
+# Hausa tone / vowel-length lexicon (TEMPLATE - intentionally empty of linguistic claims).
+#
+# Standard Hausa spelling does not mark tone or vowel length, so this file is where you put that
+# knowledge. Fill it from a reliable source (e.g. a tone-marked dictionary such as Bargery/Abraham,
+# Newman's "The Hausa Language", or native-speaker annotation). Entries here are NOT verified by the
+# authors of this code; do not trust any entry you did not check yourself.
+#
+# Format: plain_form<TAB>annotated_form        (UTF-8, '#' starts a comment)
+#   grave  ̀ = Low      circumflex  ̂ = Falling      acute  ́ = High (explicit)
+#   macron  ̄ or a doubled letter = long vowel.  Unmarked vowels in the annotated form are High.
+#   Hooked letters ɓ ɗ ƙ ƴ are written in Unicode (or as 'b 'd 'k 'y).
+# Homographs: the first entry wins (context-free lookup).
+#
+# Example of the *format* only (a made-up pseudo-word, NOT Hausa):
+#   ɓaal	ɓàal

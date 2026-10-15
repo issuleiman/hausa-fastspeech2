@@ -1,0 +1,80 @@
+== 1. synthetic corpus (pseudo-words) ==
+  [PASS] corpus written: 400  
+== 2. frontend: lexicon reproduces annotated tokens from plain text ==
+  [PASS] lexicon(plain) == annotated tokens: 30/30  
+  [PASS] no lexicon -> tones UNKNOWN: 3  
+== 3. preprocessing (real MFA-TextGrid path) ==
+   pitch_tone_skip = True
+processed 400 utterances, skipped 0; train=388 val=12; 2 speaker(s)
+  [PASS] utterances skipped: 0  
+  [PASS] recovered speaker register ratio B/A (true 1.75): 1.74  
+== 4. training 1500 steps (CPU) ==
+model parameters: 1.79M | device cpu | train 388 / val 12 utterances
+step=1 lr=2e-05 t=0.4 total=20.0907 mel=5.8549 postnet=5.9067 duration=3.1231 pitch=1.7327 energy=3.3856 tone=0.8769 length=0.0
+step=50 lr=0.001 t=9.7 total=8.2669 mel=3.1984 postnet=3.272 duration=0.2111 pitch=0.8265 energy=0.676 tone=0.8297 length=0.0
+step=100 lr=0.002 t=19.2 total=3.5925 mel=1.4057 postnet=1.4193 duration=0.2076 pitch=0.2668 energy=0.2019 tone=0.9115 length=0.0
+step=150 lr=0.0016329931618554521 t=28.6 total=2.6223 mel=0.8915 postnet=1.146 duration=0.1262 pitch=0.2532 energy=0.1617 tone=0.4372 length=0.0
+step=200 lr=0.0014142135623730952 t=37.6 total=1.9018 mel=0.7015 postnet=0.8892 duration=0.0971 pitch=0.1218 energy=0.0923 tone=0.0 length=0.0
+VAL val_total=1.8647 val_mel=0.7469 val_postnet=0.7724 val_duration=0.0949 val_pitch=0.1798 val_energy=0.0708 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=1.68 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.4538 step=200
+step=250 lr=0.0012649110640673518 t=47.1 total=1.5523 mel=0.5315 postnet=0.7019 duration=0.0849 pitch=0.1335 energy=0.1005 tone=0.0 length=0.0
+step=300 lr=0.0011547005383792516 t=56.6 total=1.5719 mel=0.5683 postnet=0.7132 duration=0.0604 pitch=0.1482 energy=0.0819 tone=0.0 length=0.0
+step=350 lr=0.0010690449676496977 t=66.2 total=1.7243 mel=0.5659 postnet=0.7024 duration=0.1117 pitch=0.2159 energy=0.064 tone=0.6442 length=0.0
+step=400 lr=0.001 t=75.8 total=1.4058 mel=0.489 postnet=0.5987 duration=0.063 pitch=0.1273 energy=0.0569 tone=0.7094 length=0.0
+VAL val_total=1.4301 val_mel=0.552 val_postnet=0.5924 val_duration=0.1265 val_pitch=0.1024 val_energy=0.0568 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=2.0074 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.6015 step=400
+step=450 lr=0.0009428090415820634 t=85.6 total=1.2281 mel=0.4471 postnet=0.5577 duration=0.0353 pitch=0.1252 energy=0.0627 tone=0.0 length=0.0
+step=500 lr=0.0008944271909999159 t=94.8 total=1.1571 mel=0.4574 postnet=0.5376 duration=0.0407 pitch=0.0748 energy=0.0466 tone=0.0 length=0.0
+step=550 lr=0.0008528028654224418 t=104.4 total=1.1482 mel=0.4078 postnet=0.4812 duration=0.0233 pitch=0.1566 energy=0.0289 tone=0.5044 length=0.0
+step=600 lr=0.0008164965809277261 t=113.6 total=1.3405 mel=0.484 postnet=0.5388 duration=0.0357 pitch=0.1432 energy=0.0518 tone=0.8706 length=0.0
+VAL val_total=1.2377 val_mel=0.4655 val_postnet=0.4911 val_duration=0.1551 val_pitch=0.0824 val_energy=0.0437 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=1.9504 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.5667 step=600
+step=650 lr=0.0007844645405527362 t=123.6 total=1.021 mel=0.4079 postnet=0.4528 duration=0.0344 pitch=0.0871 energy=0.0388 tone=0.0 length=0.0
+step=700 lr=0.0007559289460184544 t=132.8 total=1.1577 mel=0.3931 postnet=0.4302 duration=0.0326 pitch=0.1326 energy=0.0263 tone=1.4284 length=0.0
+step=750 lr=0.0007302967433402215 t=142.5 total=0.844 mel=0.363 postnet=0.375 duration=0.0182 pitch=0.0533 energy=0.0346 tone=0.0 length=0.0
+step=800 lr=0.0007071067811865476 t=152.0 total=1.1618 mel=0.4049 postnet=0.4145 duration=0.0323 pitch=0.2262 energy=0.0436 tone=0.4032 length=0.0
+VAL val_total=1.162 val_mel=0.4458 val_postnet=0.4455 val_duration=0.1392 val_pitch=0.0858 val_energy=0.0456 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=1.9525 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.5955 step=800
+step=850 lr=0.0006859943405700354 t=162.2 total=0.8329 mel=0.3514 postnet=0.3536 duration=0.0204 pitch=0.0673 energy=0.0401 tone=0.0 length=0.0
+step=900 lr=0.0006666666666666666 t=171.9 total=0.8624 mel=0.3314 postnet=0.3362 duration=0.031 pitch=0.0855 energy=0.0271 tone=0.5133 length=0.0
+step=950 lr=0.0006488856845230502 t=181.7 total=1.0342 mel=0.3783 postnet=0.3826 duration=0.0253 pitch=0.1462 energy=0.0323 tone=0.6953 length=0.0
+step=1000 lr=0.0006324555320336759 t=191.3 total=0.8813 mel=0.3655 postnet=0.3661 duration=0.0254 pitch=0.092 energy=0.0322 tone=0.0 length=0.0
+VAL val_total=1.114 val_mel=0.4091 val_postnet=0.4094 val_duration=0.1623 val_pitch=0.0879 val_energy=0.0453 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=2.0293 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.6795 step=1000
+step=1050 lr=0.0006172133998483677 t=201.3 total=0.7911 mel=0.3433 postnet=0.3428 duration=0.0338 pitch=0.0315 energy=0.0398 tone=0.0 length=0.0
+step=1100 lr=0.0006030226891555273 t=210.9 total=0.8601 mel=0.3554 postnet=0.3558 duration=0.0268 pitch=0.0744 energy=0.0477 tone=0.0 length=0.0
+step=1150 lr=0.0005897678246195886 t=220.6 total=0.8208 mel=0.3549 postnet=0.3551 duration=0.0188 pitch=0.052 energy=0.04 tone=0.0 length=0.0
+step=1200 lr=0.0005773502691896258 t=230.2 total=0.7583 mel=0.3268 postnet=0.3269 duration=0.0236 pitch=0.0544 energy=0.0266 tone=0.0 length=0.0
+VAL val_total=1.0647 val_mel=0.3869 val_postnet=0.3869 val_duration=0.1517 val_pitch=0.0913 val_energy=0.0479 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=1.9383 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.6348 step=1200
+step=1250 lr=0.000565685424949238 t=240.4 total=0.8127 mel=0.3233 postnet=0.3231 duration=0.021 pitch=0.0894 energy=0.0261 tone=0.298 length=0.0
+step=1300 lr=0.0005547001962252292 t=249.8 total=0.7752 mel=0.3158 postnet=0.3154 duration=0.044 pitch=0.0648 energy=0.0306 tone=0.0454 length=0.0
+step=1350 lr=0.0005443310539518174 t=259.5 total=0.8321 mel=0.3324 postnet=0.3322 duration=0.0277 pitch=0.0787 energy=0.0305 tone=0.3051 length=0.0
+step=1400 lr=0.0005345224838248488 t=269.8 total=0.7712 mel=0.3106 postnet=0.3101 duration=0.0212 pitch=0.0507 energy=0.0387 tone=0.3995 length=0.0
+VAL val_total=1.0509 val_mel=0.3822 val_postnet=0.3818 val_duration=0.153 val_pitch=0.085 val_energy=0.0488 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=1.9977 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.6689 step=1400
+step=1450 lr=0.0005252257314388902 t=280.1 total=0.8083 mel=0.3156 postnet=0.3155 duration=0.0257 pitch=0.1055 energy=0.0253 tone=0.2067 length=0.0
+step=1500 lr=0.0005163977794943222 t=289.9 total=0.9202 mel=0.3483 postnet=0.3478 duration=0.02 pitch=0.1345 energy=0.0215 tone=0.4818 length=0.0
+VAL val_total=1.0599 val_mel=0.3709 val_postnet=0.3705 val_duration=0.1732 val_pitch=0.095 val_energy=0.0503 val_tone=0.0 val_length=0.0 val_long_short_ratio_pred=2.0758 val_long_short_ratio_true=1.9224 val_tone_probe_acc=0.6795 step=1500
+  [PASS] training time (s): 292.0  
+  [PASS] val loss vs first train step (need < 0.35x): 20.09 -> 1.06  
+  [PASS] no NaN in history: True  
+   (info) val tone-probe acc on fully unmarked text, incl. unseen words: 0.680 - unseen words' tones are not recoverable from text, so no threshold
+  [PASS] val long/short vowel ratio pred vs true: 2.08 vs 1.92  
+== 5. inference checks on held-out sentences ==
+   predicted contour means (z): H [0.26 0.26 0.23] L [-0.72 -0.81 -0.85] F [ 1.03  0.07 -1.15]
+  [PASS] pred H - L pitch gap (z): 1.04  
+  [PASS] pred F fall start-end (z): 2.18  
+  [PASS] pred H level contour is not falling like F: 0.03  
+  [PASS] downstep: H after >=2 L/F lower than first H (n=30/49): 1.94  
+  [PASS] pred long/short vowel duration ratio (true 2.0): 2.1  
+  [PASS] pred speaker F0 ratio B/A on same text (true ~1.75): 1.75  
+== 6. unmarked text: lexicon vs model tone head ==
+  [PASS] tone head on unmarked text, SEEN words only (lexical memory): 0.909  
+== 6b. compositional generalisation: does the model use the tone / length INPUT? ==
+  [PASS] tone-swap test: H-L gap follows the INPUT tone (orig text): 1.42  
+  [KNOWN-LIMITATION] tone-swap test: H-L gap follows the INPUT tone (H<->L swapped text): 0.44  (negative = frequent words are recalled from memory instead of obeying a contradicting tone annotation; documented limitation, see README)
+  [PASS] novel words: H-L gap (z): 0.97  
+  [PASS] novel words: F fall start-end (z): 2.15  
+  [PASS] novel words: long/short duration ratio (true 2.0): 2.09  
+== 7. variance controls ==
+  [PASS] speed=2 -> frames ratio (expect ~0.5): 0.49  
+  [PASS] pitch_ratio=1.25 -> mean F0 ratio (expect 1.25): 1.25  
+  [PASS] pitch_range=1.5 -> F0 log-std ratio (expect ~1.5): 1.5  
+== 8. artifacts ==
+  [PASS] HiFi-GAN vocoder rendered wavs: True  
+
+24/24 gating checks passed in 338.5s; 1 known-limitation diagnostic(s) not met: ['tone-swap test: H-L gap follows the INPUT tone (H<->L swapped text)']
